@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conversation Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conversation</th>
+      <th>Profile</th>
+      <th>Status</th>
+      <th>Created by</th>
+      <th>Updated by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conversation_members.each do |conversation_member| %>
+      <tr>
+        <td><%= conversation_member.conversation %></td>
+        <td><%= conversation_member.profile %></td>
+        <td><%= conversation_member.status %></td>
+        <td><%= conversation_member.created_by %></td>
+        <td><%= conversation_member.updated_by %></td>
+        <td><%= link_to 'Show', conversation_member %></td>
+        <td><%= link_to 'Edit', edit_conversation_member_path(conversation_member) %></td>
+        <td><%= link_to 'Destroy', conversation_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conversation Member', new_conversation_member_path %>

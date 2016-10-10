@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comment Widgets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Post</th>
+      <th>Allow api access</th>
+      <th>Description</th>
+      <th>Current score</th>
+      <th>Commenter count</th>
+      <th>Voter count</th>
+      <th>Status</th>
+      <th>Group visibility</th>
+      <th>Connection visibility</th>
+      <th>User visibility</th>
+      <th>Public visibility</th>
+      <th>Rating</th>
+      <th>Widget style</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comment_widgets.each do |comment_widget| %>
+      <tr>
+        <td><%= comment_widget.post %></td>
+        <td><%= comment_widget.allow_api_access %></td>
+        <td><%= comment_widget.description %></td>
+        <td><%= comment_widget.current_score %></td>
+        <td><%= comment_widget.commenter_count %></td>
+        <td><%= comment_widget.voter_count %></td>
+        <td><%= comment_widget.status %></td>
+        <td><%= comment_widget.group_visibility %></td>
+        <td><%= comment_widget.connection_visibility %></td>
+        <td><%= comment_widget.users_visibility %></td>
+        <td><%= comment_widget.public_visibility %></td>
+        <td><%= comment_widget.rating %></td>
+        <td><%= comment_widget.widget_style %></td>
+        <td><%= link_to 'Show', comment_widget %></td>
+        <td><%= link_to 'Edit', edit_comment_widget_path(comment_widget) %></td>
+        <td><%= link_to 'Destroy', comment_widget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment Widget', new_comment_widget_path %>

@@ -1,0 +1,2 @@
+json.extract! group_member, :id, :group_id, :profile_id, :status, :created_by, :updated_by, :is_admin, :can_post, :can_add_events, :can_comment, :created_at, :updated_at
+json.url group_member_url(group_member, format: :json)

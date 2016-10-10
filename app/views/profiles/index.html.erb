@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Profile name</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Status</th>
+      <th>Created by</th>
+      <th>Updated by</th>
+      <th>Avatar</th>
+      <th>Gravatar Url</th>
+      <th>Bio</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Tagline</th>
+      <th>Theme music</th>
+      <th>Birth date</th>
+      <th>Email</th>
+      <th>Profile Responsibility Date</th>
+      <th>Unique Name</th>      
+
+      <th>Require Connection Approval</th>      
+      <th>Require Conversation Approval</th>      
+      <th>Require Group Approval</th>      
+      <th>Require Post Approval</th>      
+      <th>Require Comment Approval</th>      
+      <th>Can View Non Connection Posts</th>      
+      <th>Show Comments</th>      
+      <th>Show Votes</th>      
+      <th>Allow Commenting</th>
+      <th>Allow Voting</th>      
+
+      <th>Allow emails</th>
+      <th>Inform user of actions</th>
+      <th>Allowed Rating</th>
+      <th>Permission</th>
+      <th>Group visibility</th>
+      <th>Connection visibility</th>
+      <th>User visibility</th>
+      <th>Public visibility</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.user_id %></td>
+        <td><%= profile.profile_name %></td>
+        <td><%= profile.first_name %></td>
+        <td><%= profile.last_name %></td>
+        <td><%= profile.status %></td>
+        <td><%= profile.created_by %></td>
+        <td><%= profile.updated_by %></td>
+        <td><%= profile.avatar %></td>
+        <td><%= profile.gravatar_url %></td>
+        <td><%= profile.bio %></td>
+        <td><%= profile.state %></td>
+        <td><%= profile.country %></td>
+        <td><%= profile.tagline %></td>
+        <td><%= profile.theme_music %></td>
+        <td><%= profile.birth_date %></td>
+        <td><%= profile.email %></td>
+        <td><%= profile.profile_responsibility_date %></td>
+        <td><%= profile.require_conversation_approval %></td>
+        <td><%= profile.require_group_approval %></td>
+        <td><%= profile.require_post_approval %></td>
+        <td><%= profile.require_comment_approval %></td>
+        <td><%= profile.can_view_non_connection_posts %></td>
+        <td><%= profile.show_comments %></td>
+        <td><%= profile.show_votes %></td>
+        <td><%= profile.allow_commenting %></td>
+        <td><%= profile.allow_voting %></td>
+        <td><%= profile.allow_emails %></td>
+        <td><%= profile.inform_user_of_actions %></td>
+        <td><%= profile.allowed_rating %></td>
+        <td><%= profile.permission %></td>
+        <td><%= profile.group_visibility %></td>
+        <td><%= profile.connection_visibility %></td>
+        <td><%= profile.users_visibility %></td>
+        <td><%= profile.public_visibility %></td>
+        <td><%= profile.rating %></td>
+        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>

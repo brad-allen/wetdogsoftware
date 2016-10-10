@@ -1,0 +1,1 @@
+json.partial! "conversation_members/conversation_member", conversation_member: @conversation_member

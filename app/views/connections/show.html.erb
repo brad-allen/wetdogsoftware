@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @connection.profile %>
+</p>
+
+<p>
+  <strong>Connection profile:</strong>
+  <%= @connection.connection_profile %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @connection.status %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @connection.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @connection.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<%= link_to 'Back', connections_path %>

@@ -1,0 +1,88 @@
+<%= form_for(calendar_event) do |f| %>
+  <% if calendar_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(calendar_event.errors.count, "error") %> prohibited this calendar_event from being saved:</h2>
+
+      <ul>
+      <% calendar_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_contact %>
+    <%= f.text_field :event_contact %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_start %>
+    <%= f.datetime_select :event_start %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_end %>
+    <%= f.datetime_select :event_end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :all_day %>
+    <%= f.check_box :all_day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :group_visibility %>
+    <%= f.text_field :group_visibility %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :connection_visibility %>
+    <%= f.text_field :connection_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :users_visibility %>
+    <%= f.text_field :users_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :public_visibility %>
+    <%= f.text_field :public_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_id %>
+    <%= f.text_field :profile_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :group_id %>
+    <%= f.text_field :group_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.array! @comment_widgets, partial: 'comment_widgets/comment_widget', as: :comment_widget

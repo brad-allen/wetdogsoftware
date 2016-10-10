@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @post.profile %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @post.group %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @post.group_visibility %>
+</p>
+
+<p>
+  <strong>Profile visibility:</strong>
+  <%= @post.connection_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @post.connection_visibility %>
+</p>
+
+<p>
+  <strong>User visibility:</strong>
+  <%= @post.users_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @post.rating %>
+</p>
+
+<p>
+  <strong>Post type:</strong>
+  <%= @post.post_type %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @post.image %>
+</p>
+
+<p>
+  <strong>Thumb image:</strong>
+  <%= @post.thumb_image %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @post.status %>
+</p>
+
+<%= link_to 'Create New Comment Widget', new_comment_widget_path(post_id:@post.id) %>
+
+<%= link_to 'Create New Comment', new_comment_path(post_id:@post.id) %>
+<%= link_to 'Comments for this Post', post_comments_path(post_id:@post.id) %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

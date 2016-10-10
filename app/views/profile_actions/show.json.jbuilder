@@ -1,0 +1,1 @@
+json.partial! "profile_actions/profile_action", profile_action: @profile_action

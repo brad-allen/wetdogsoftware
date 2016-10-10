@@ -1,0 +1,18 @@
+<div class="col-md-12" id="links" style="text-align: center"> 
+  <h3>
+    <a id='home_link', title="Home", class='glyphicon glyphicon-home' href="<%=root_path%>"></a>&nbsp;
+
+    <button class='glyphicon glyphicon-user btn-link' type="button" title="Profile"  onclick="Get(<%=@profile.id%>, 'profiles')"></button>&nbsp;
+    <button class='glyphicon glyphicon-file btn-link' type="button" title="Pages"  onclick="GetList(<%=@profile.id%>, 'pages')"></button>&nbsp;
+    <button class='glyphicon glyphicon-calendar btn-link' type="button" title="Events"  onclick="GetList(<%=@profile.id%>, 'calendar_events')"></button>&nbsp;
+    <button class='glyphicon glyphicon-book btn-link' type="button" title="Posts"  onclick="GetList(<%=@profile.id%>, 'posts')"></button>&nbsp;
+    <button class='glyphicon glyphicon-comment btn-link' type="button" title="Conversations"  onclick="GetList(<%=@profile.id%>, 'conversations')"></button>&nbsp;
+    <button class='glyphicon glyphicon-th btn-link' type="button" title="Connections"  onclick="GetList(<%=@profile.id%>, 'connections')"></button>&nbsp;
+    <button class='glyphicon glyphicon-cloud btn-link' type="button" title="Groups"  onclick="GetList(<%=@profile.id%>, 'groups')"></button>&nbsp;
+
+    <!-- TODO put in real calls here -->
+    <button class='glyphicon glyphicon-cog btn-link' type="button" title="Settings"  onclick="Get(<%=@profile.id%>, 'users')"></button>&nbsp;
+    <button class='glyphicon glyphicon-search btn-link' type="button" title="Search"  onclick="Get(<%=@profile.id%>, 'users')"></button>
+
+  </h3>
+</div>

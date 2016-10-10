@@ -1,0 +1,88 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @calendar_event.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @calendar_event.description %>
+</p>
+
+<p>
+  <strong>Event contact:</strong>
+  <%= @calendar_event.event_contact %>
+</p>
+
+<p>
+  <strong>Event start:</strong>
+  <%= @calendar_event.event_start %>
+</p>
+
+<p>
+  <strong>Event end:</strong>
+  <%= @calendar_event.event_end %>
+</p>
+
+<p>
+  <strong>All day:</strong>
+  <%= @calendar_event.all_day %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @calendar_event.group_visibility %>
+</p>
+
+<p>
+  <strong>Profile visibility:</strong>
+  <%= @calendar_event.connection_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @calendar_event.connection_visibility %>
+</p>
+
+<p>
+  <strong>User visibility:</strong>
+  <%= @calendar_event.users_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @calendar_event.rating %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @calendar_event.status %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @calendar_event.profile %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @calendar_event.group %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @calendar_event.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @calendar_event.updated_by %>
+</p>
+
+
+<%= link_to 'Create New Notification', new_notification_path(calendar_event_id:@calendar_event.id) %>
+<%= link_to 'Notifications', calendar_event_notifications_path(calendar_event_id:@calendar_event.id) %>
+
+<%= link_to 'Edit', edit_calendar_event_path(@calendar_event) %> |
+<%= link_to 'Back', calendar_events_path %>

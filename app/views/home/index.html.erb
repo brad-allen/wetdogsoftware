@@ -1,0 +1,54 @@
+<%= javascript_include_tag('home.js') %>
+
+<div id="main-container" class="fluid-container">
+  <div class="row">
+   <%= render "shared/header" %>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12" id="pageBody">          
+        <h2>
+          <strong>Profile name:</strong>
+          <%= link_to (@profile.profile_name.present? ? @profile.profile_name : 'Please create a username'), profile_path(id:@profile.id) %>
+        </h2>        
+      
+        <h2>
+          <strong>Status:</strong>
+          <%= @profile.status %>
+        </h2>
+      
+        <h2>
+          <strong>Member since:</strong>
+          <%= @profile.created_at %>
+        </h2>
+      
+        <h2>
+          <strong>Tagline:</strong>
+          <%= @profile.tagline %>
+        </h2>       
+    </div>
+  </div>
+
+  <div class="row">       
+      <%= render "shared/profile_links" %>
+  </div>
+
+   <div class="row">
+      <%= render "shared/footer" %>         
+</div>
+
+
+<script language="javascript" type="text/javascript">
+<!--  
+
+    $(document).ready(function()
+     {
+        
+      });   
+
+-->
+</script>
+
+<noscript> 
+    This website requires javascript...
+</noscript>

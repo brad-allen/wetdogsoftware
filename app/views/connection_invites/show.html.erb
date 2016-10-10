@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @connection_invite.profile %>
+</p>
+
+<p>
+  <strong>Connection profile:</strong>
+  <%= @connection_invite.connection_profile %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @connection_invite.status %>
+</p>
+
+<p>
+  <strong>Invited at:</strong>
+  <%= @connection_invite.invited_at %>
+</p>
+
+<p>
+  <strong>Reinvited at:</strong>
+  <%= @connection_invite.reinvited_at %>
+</p>
+
+<p>
+  <strong>Rejected at:</strong>
+  <%= @connection_invite.rejected_at %>
+</p>
+
+<p>
+  <strong>Accepted at:</strong>
+  <%= @connection_invite.accepted_at %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @connection_invite.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @connection_invite.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_connection_invite_path(@connection_invite) %> |
+<%= link_to 'Back', connection_invites_path %>

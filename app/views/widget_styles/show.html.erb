@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @widget_style.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @widget_style.description %>
+</p>
+
+<p>
+  <strong>Style data:</strong>
+  <%= @widget_style.style_data %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @widget_style.status %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @widget_style.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @widget_style.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_widget_style_path(@widget_style) %> |
+<%= link_to 'Back', widget_styles_path %>

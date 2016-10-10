@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Profile</th>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Group visibility</th>
+      <th>Connection visibility</th>
+      <th>User visibility</th>
+      <th>Public visibility</th>
+      <th>Rating</th>
+      <th>Status</th>
+      <th>Created by</th>
+      <th>Updated by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_actions.each do |group_action| %>
+      <tr>
+        <td><%= group_action.group %></td>
+        <td><%= group_action.profile %></td>
+        <td><%= group_action.action %></td>
+        <td><%= group_action.description %></td>
+        <td><%= group_action.group_visibility %></td>
+        <td><%= group_action.connection_visibility %></td>
+        <td><%= group_action.users_visibility %></td>
+        <td><%= group_action.public_visibility %></td>
+        <td><%= group_action.rating %></td>
+        <td><%= group_action.status %></td>
+        <td><%= group_action.created_by %></td>
+        <td><%= group_action.updated_by %></td>
+        <td><%= link_to 'Show', group_action %></td>
+        <td><%= link_to 'Edit', edit_group_action_path(group_action) %></td>
+        <td><%= link_to 'Destroy', group_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Action', new_group_action_path %>

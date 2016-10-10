@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @group_member.group %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @group_member.profile %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group_member.status %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @group_member.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @group_member.updated_by %>
+</p>
+
+<p>
+  <strong>Is admin:</strong>
+  <%= @group_member.is_admin %>
+</p>
+
+<p>
+  <strong>Can post:</strong>
+  <%= @group_member.can_post %>
+</p>
+
+<p>
+  <strong>Can add events:</strong>
+  <%= @group_member.can_add_events %>
+</p>
+
+<p>
+  <strong>Can comment:</strong>
+  <%= @group_member.can_comment %>
+</p>
+
+<%= link_to 'Edit', edit_group_member_path(@group_member) %> |
+<%= link_to 'Back', group_members_path %>

@@ -1,0 +1,2 @@
+json.extract! group_invite, :id, :group_id, :profile_id, :status, :invited_at, :reinvited_at, :rejected_at, :accepted_at, :approved_at, :approved_by, :created_by, :updated_by, :is_admin, :can_post, :can_add_events, :can_comment, :created_at, :updated_at
+json.url group_invite_url(group_invite, format: :json)

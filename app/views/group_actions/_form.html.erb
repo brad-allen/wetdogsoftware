@@ -1,0 +1,69 @@
+<%= form_for(group_action) do |f| %>
+  <% if group_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group_action.errors.count, "error") %> prohibited this group_action from being saved:</h2>
+
+      <ul>
+      <% group_action.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :group_id %>
+    <%= f.text_field :group_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_id %>
+    <%= f.text_field :profile_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :action %>
+    <%= f.text_field :action %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :group_visibility %>
+    <%= f.text_field :group_visibility %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :connection_visibility %>
+    <%= f.text_field :connection_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :users_visibility %>
+    <%= f.text_field :users_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :public_visibility %>
+    <%= f.text_field :public_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

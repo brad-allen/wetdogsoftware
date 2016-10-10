@@ -1,0 +1,1 @@
+json.array! @conversation_invites, partial: 'conversation_invites/conversation_invite', as: :conversation_invite

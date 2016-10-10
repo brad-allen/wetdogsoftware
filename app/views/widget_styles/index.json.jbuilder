@@ -1,0 +1,1 @@
+json.array! @widget_styles, partial: 'widget_styles/widget_style', as: :widget_style

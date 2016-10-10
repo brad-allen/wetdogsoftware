@@ -1,0 +1,2 @@
+json.extract! connection_invite, :id, :profile_id, :connection_profile_id, :status, :invited_at, :reinvited_at, :rejected_at, :accepted_at, :approved_at, :approved_by, :created_by, :updated_by, :created_at, :updated_at
+json.url connection_invite_url(connection_invite, format: :json)

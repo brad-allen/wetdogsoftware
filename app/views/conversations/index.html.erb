@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conversations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Allow html</th>
+      <th>Status</th>
+      <th>Created by</th>
+      <th>Updated by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conversations.each do |conversation| %>
+      <tr>
+        <td><%= conversation.title %></td>
+        <td><%= conversation.allow_html %></td>
+        <td><%= conversation.status %></td>
+        <td><%= conversation.created_by %></td>
+        <td><%= conversation.updated_by %></td>
+        <td><%= link_to 'Show', conversation %></td>
+        <td><%= link_to 'Edit', edit_conversation_path(conversation) %></td>
+        <td><%= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conversation', new_conversation_path %>

@@ -1,0 +1,2 @@
+json.extract! page, :id, :profile_id, :group_id, :name, :description, :page_order, :status, :group_visibility, :connection_visibility, :users_visibility, :public_visibility, :rating, :created_by, :updated_by, :created_at, :updated_at
+json.url page_url(page, format: :json)

@@ -1,0 +1,82 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post Id:</strong>
+  <%= @comment_widget.post_id %>
+</p>
+
+<p>
+  <strong>Allow api access:</strong>
+  <%= @comment_widget.allow_api_access %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @comment_widget.description %>
+</p>
+
+<p>
+  <strong>Current score:</strong>
+  <%= @comment_widget.current_score %>
+</p>
+
+<p>
+  <strong>Commenter count:</strong>
+  <%= @comment_widget.commenter_count %>
+</p>
+
+<p>
+  <strong>Voter count:</strong>
+  <%= @comment_widget.voter_count %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @comment_widget.status %>
+</p>
+
+<p>
+  <strong>Widget style:</strong>
+  <%= @comment_widget.widget_style %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @comment_widget.group_visibility %>
+</p>
+
+<p>
+  <strong>Profile visibility:</strong>
+  <%= @comment_widget.connection_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @comment_widget.connection_visibility %>
+</p>
+
+<p>
+  <strong>User visibility:</strong>
+  <%= @comment_widget.users_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @comment_widget.rating %>
+</p>
+
+
+<p>
+  <strong>Created by:</strong>
+  <%= @comment_widget.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @comment_widget.updated_by %>
+</p>
+
+<%= link_to 'Comments', comment_widget_comments_path(comment_widget_id:@comment_widget.id) %>
+
+<%= link_to 'Edit', edit_comment_widget_path(@comment_widget) %> |
+<%= link_to 'Back', comment_widgets_path %>

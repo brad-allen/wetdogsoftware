@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @group_action.group %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @group_action.profile %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @group_action.action %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @group_action.description %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @group_action.group_visibility %>
+</p>
+
+<p>
+  <strong>Profile visibility:</strong>
+  <%= @group_action.connection_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @group_action.connection_visibility %>
+</p>
+
+<p>
+  <strong>User visibility:</strong>
+  <%= @group_action.users_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @group_action.rating %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group_action.status %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @group_action.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @group_action.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_group_action_path(@group_action) %> |
+<%= link_to 'Back', group_actions_path %>

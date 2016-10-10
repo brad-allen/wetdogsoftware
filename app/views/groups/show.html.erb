@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @group.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group.status %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @group.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @group.updated_by %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @group.group_visibility %>
+</p>
+
+<p>
+  <strong>Profile visibility:</strong>
+  <%= @group.connection_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @group.connection_visibility %>
+</p>
+
+<p>
+  <strong>User visibility:</strong>
+  <%= @group.users_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @group.rating %>
+</p>
+
+<p>
+  <strong>Group type:</strong>
+  <%= @group.group_type %>
+</p>
+
+
+<%= link_to 'Invite Member', new_group_invite_path(group_id:@group.id) %>
+<%= link_to 'Group Members', group_group_members_path(group_id:@group.id) %>
+<%= link_to 'Owned Groups', profile_owned_groups_path(profile_id:@profile.id) %>
+<%= link_to 'Group Invites', group_group_invites_path(group_id:@group.id) %>
+<%= link_to 'Group Actions', group_group_actions_path(group_id:@group.id) %>
+<%= link_to 'Group Pages', group_pages_path(group_id:@group.id) %>
+<%= link_to 'New Group Page', new_page_path(group_id:@group.id, profile_id:@profile.id) %>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path(id:@group.id) %>

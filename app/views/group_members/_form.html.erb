@@ -1,0 +1,52 @@
+<%= form_for(group_member) do |f| %>
+  <% if group_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group_member.errors.count, "error") %> prohibited this group_member from being saved:</h2>
+
+      <ul>
+      <% group_member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :group_id %>
+    <%= f.text_field :group_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_id %>
+    <%= f.text_field :profile_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_admin %>
+    <%= f.check_box :is_admin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :can_post %>
+    <%= f.check_box :can_post %>
+  </div>
+
+  <div class="field">
+    <%= f.label :can_add_events %>
+    <%= f.check_box :can_add_events %>
+  </div>
+
+  <div class="field">
+    <%= f.label :can_comment %>
+    <%= f.check_box :can_comment %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

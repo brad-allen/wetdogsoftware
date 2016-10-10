@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pages</h1>
+
+<%= hidden_field_tag :group_id, @group.id %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile Id</th>
+      <th>Group Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Page order</th>
+      <th>Status</th>
+      <th>Group visibility</th>
+      <th>Connection visibility</th>
+      <th>Users visibility</th>
+      <th>Public visibility</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.profile_id %></td>
+        <td><%= page.group_id %></td>
+        <td><%= page.name %></td>
+        <td><%= page.description %></td>
+        <td><%= page.page_order %></td>
+        <td><%= page.status %></td>
+        <td><%= page.group_visibility %></td>
+        <td><%= page.connection_visibility %></td>
+        <td><%= page.users_visibility %></td>
+        <td><%= page.public_visibility %></td>
+        <td><%= page.rating %></td>
+        <td><%= link_to 'Show', page %></td>
+        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page', new_page_path(group_id:@group_id) %>

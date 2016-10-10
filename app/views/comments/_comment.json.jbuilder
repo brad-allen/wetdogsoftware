@@ -1,0 +1,2 @@
+json.extract! comment, :id, :profile_id, :comment_widget_id, :content, :vote_score, :upvote, :downvote, :flag_count, :status, :visibility_id, :created_by, :updated_by, :created_at, :updated_at
+json.url comment_url(comment, format: :json)

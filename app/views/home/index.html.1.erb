@@ -1,0 +1,68 @@
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="col-md-4">
+        <img src="..\wds.jpg" alt="Wet Dog Software" height="100%" width="100%">
+    </div>
+
+    <div class="col-md-4">
+      header2
+    </div>
+
+    <div class="col-md-4">
+        header3
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-4">    
+    <div class="row">
+        <h2>
+          <strong>Profile name:</strong>
+          <%= link_to (@profile.profile_name.present? ? @profile.profile_name : 'Please create a username'), profile_path(id:@profile.id) %>
+        </h2>        
+      </div>
+      <div class="row">      
+        <h2>
+          <strong>Status:</strong>
+          <%= @profile.status %>
+        </h2>
+      </div>
+      <div class="row">
+        <h2>
+          <strong>Member since:</strong>
+          <%= @profile.created_at %>
+        </h2>
+      </div>
+      <div class="row">
+        <h2>
+          <strong>Tagline:</strong>
+          <%= @profile.tagline %>
+        </h2>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+        Body2
+    </div>
+
+    <div class="col-md-4">
+        Body3
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4">    
+    </div>
+      Footer1
+    <div class="col-md-4">
+      Footer2
+    </div>
+    <div class="col-md-4">        
+      Footer3
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,1 @@
+json.partial! "widget_styles/widget_style", widget_style: @widget_style

@@ -1,0 +1,1 @@
+json.partial! "connection_invites/connection_invite", connection_invite: @connection_invite

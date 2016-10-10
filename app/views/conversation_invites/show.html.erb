@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Conversation:</strong>
+  <%= @conversation_invite.conversation %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @conversation_invite.profile %>
+</p>
+
+<p>
+  <strong>Invited profile:</strong>
+  <%= @conversation_invite.invited_profile %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @conversation_invite.status %>
+</p>
+
+<p>
+  <strong>Invited at:</strong>
+  <%= @conversation_invite.invited_at %>
+</p>
+
+<p>
+  <strong>Reinvited at:</strong>
+  <%= @conversation_invite.reinvited_at %>
+</p>
+
+<p>
+  <strong>Rejected at:</strong>
+  <%= @conversation_invite.rejected_at %>
+</p>
+
+<p>
+  <strong>Accepted at:</strong>
+  <%= @conversation_invite.accepted_at %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @conversation_invite.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @conversation_invite.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_conversation_invite_path(@conversation_invite) %> |
+<%= link_to 'Back', conversation_invites_path %>

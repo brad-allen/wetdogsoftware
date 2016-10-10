@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wet Dog Software</title>
+ 
+</head>
+
+<body>
+  <center><img src="wds.jpg" alt="Their image here" height="25%" width="25%"></center>
+
+	<h2>
+	  <strong>Profile name:</strong>
+	  <%= link_to (@profile.profile_name.present? ? @profile.profile_name : 'Please create a username'), profile_path(id:@profile.id) %>
+	</h2>
+
+	<h2>
+	  <strong>Status:</strong>
+	  <%= @profile.status %>
+	</h2>
+
+	<h2>
+	  <strong>Member since:</strong>
+	  <%= @profile.created_at %>
+	</h2>
+
+	<h2>
+	  <strong>Tagline:</strong>
+	  <%= @profile.tagline %>
+	</h2>
+  <p>
+    <h3><%= link_to 'Profile', profile_path(id:@profile.id) %></h3>
+  </p>
+  <p>
+    <h3><%= link_to 'Pages', profile_pages_path(profile_id:@profile.id) %></h3>
+  </p>
+  <p>
+    <h3><%= link_to 'Calendar Events', profile_calendar_events_path(profile_id:@profile.id) %></h3>
+  </p>
+  <p>
+    <h3><%= link_to 'Your Posts', profile_posts_path(profile_id:@profile.id) %></h3>    
+  </p>
+  
+  <p>
+    <h3><%= link_to 'Conversations', profile_conversations_path(profile_id:@profile.id) %></h3>
+    <h3><%= link_to 'Conversation Invites', profile_conversation_invites_path(profile_id:@profile.id) %></h3>
+  </p>
+ 
+  <p>
+    <h3><%= link_to 'Create Connection', new_connection_path %></h3>
+    <h3><%= link_to 'Connections', profile_connections_path(profile_id:@profile.id) %></h3>
+    <h3><%= link_to 'Connection Invites', profile_connection_invites_path(profile_id:@profile.id) %></h3>
+  </p>
+  <p>
+  
+  <p>
+    <h3><%= link_to 'Groups', profile_groups_path(profile_id:@profile.id) %></h3>
+    <h3><%= link_to 'Owned Groups', profile_owned_groups_path(profile_id:@profile.id) %></h3>
+    <h3><%= link_to 'Group Invites', profile_group_invites_path(profile_id:@profile.id) %></h3>
+  </p>
+
+   <p>
+    <h3><%= link_to 'Your Past Comments', profile_comments_path(profile_id:@profile.id) %></h3>
+  </p>
+
+	<p>
+    <h3><%= link_to 'Your Actions', profile_profile_actions_path(profile_id:@profile.id) %></h3>
+  </p>
+
+  <p>
+    <h3><%= link_to 'TODO Search Profiles', profiles_path %></h3>
+  </p>
+
+  <p>
+    <h3><%= link_to 'TODO Search Pages', pages_path %></h3>
+  </p>
+
+  <p>
+    <h3><%= link_to 'TODO Timeline', profiles_path %></h3>
+  </p>
+
+  <div class="container-fluid" ng-app="wetdogsoftware">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h1 ng-if="name">Hello, {{name}}</h1>
+    </div>
+    <div class="panel-body">
+      <form class="form-inline">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Enter your name" autofocus ng-model="name">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<%= form_for(comment) do |f| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profile_id %>
+    <%= f.text_field :profile_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment_widget_id %>
+    <%= f.text_field :comment_widget_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vote_score %>
+    <%= f.number_field :vote_score %>
+  </div>
+
+  <div class="field">
+    <%= f.label :upvote %>
+    <%= f.check_box :upvote %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flag_count %>
+    <%= f.numeric_field :flag_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :downvote %>
+    <%= f.check_box :downvote %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :group_visibility %>
+    <%= f.text_field :group_visibility %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :connection_visibility %>
+    <%= f.text_field :connection_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :users_visibility %>
+    <%= f.text_field :users_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :public_visibility %>
+    <%= f.text_field :public_visibility %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile Id</th>
+      <th>Group Id</th>
+      <th>Page Id</th>
+      <th>Post type</th>
+      <th>Content</th>
+      <th>Image</th>
+      <th>Thumb image</th>
+      <th>Status</th>
+      <th>Group visibility</th>
+      <th>Connection visibility</th>
+      <th>User visibility</th>
+      <th>Public visibility</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.profile_id %></td>
+        <td><%= post.group_id %></td>
+        <td><%= post.page_id %></td>
+        <td><%= post.post_type %></td>
+        <td><%= post.content %></td>
+        <td><%= post.image %></td>
+        <td><%= post.thumb_image %></td>
+        <td><%= post.status %></td>
+        <td><%= post.group_visibility %></td>
+        <td><%= post.connection_visibility %></td>
+        <td><%= post.users_visibility %></td>
+        <td><%= post.public_visibility %></td>
+        <td><%= post.rating %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>

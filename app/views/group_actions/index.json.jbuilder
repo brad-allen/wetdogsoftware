@@ -1,0 +1,1 @@
+json.array! @group_actions, partial: 'group_actions/group_action', as: :group_action

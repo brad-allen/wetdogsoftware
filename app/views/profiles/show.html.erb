@@ -1,0 +1,179 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user_id %>
+</p>
+
+<p>
+  <strong>Profile name:</strong>
+  <%= @profile.profile_name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>Profile responsibility date:</strong>
+  <%= @profile.profile_responsibility_date %>
+</p>
+
+<p>
+  <strong>Unique name:</strong>
+  <%= @profile.unique_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @profile.status %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @profile.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @profile.updated_by %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @profile.avatar %>
+</p>
+
+<p>
+  <strong>Gravatar Url:</strong>
+  <%= @profile.gravatar_url %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @profile.bio %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @profile.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @profile.country %>
+</p>
+
+<p>
+  <strong>Tagline:</strong>
+  <%= @profile.tagline %>
+</p>
+
+<p>
+  <strong>Theme music:</strong>
+  <%= @profile.theme_music %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= @profile.birth_date %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Require conversation approval:</strong>
+  <%= @profile.require_conversation_approval %>
+</p>
+
+<p>
+  <strong>Require group approval:</strong>
+  <%= @profile.require_group_approval %>
+</p>
+
+<p>
+  <strong>Require post approval:</strong>
+  <%= @profile.require_post_approval %>
+</p>
+
+<p>
+  <strong>Require comment approval:</strong>
+  <%= @profile.require_comment_approval %>
+</p>
+
+<p>
+  <strong>Can view non-can_view_non_connection_posts posts:</strong>
+  <%= @profile.can_view_non_connection_posts %>
+</p>
+
+<p>
+  <strong>Show comments for other's posts:</strong>g>
+  <%= @profile.show_comments %>
+</p>
+
+<p>
+  <strong>Show votes for other's posts:</strong>
+  <%= @profile.show_votes %>
+</p>
+
+<p>
+  <strong>Allow commenting on this user's posts:</strong>
+  <%= @profile.allow_commenting %>
+</p>
+
+<p>
+  <strong>Allow voting on this user's posts:</strong>
+  <%= @profile.allow_voting %>
+</p>
+
+<p>
+  <strong>Allow emails to be sent to this user:</strong>
+  <%= @profile.allow_emails %>
+</p>
+
+<p>
+  <strong>Inform user of actions:</strong>
+  <%= @profile.inform_user_of_actions %>
+</p>
+
+<p>
+  <strong>Allowed rating:</strong>
+  <%= @profile.allowed_rating %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @profile.group_visibility %>
+</p>
+
+<p>
+  <strong>Profile visibility:</strong>
+  <%= @profile.connection_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @profile.connection_visibility %>
+</p>
+
+<p>
+  <strong>User visibility:</strong>
+  <%= @profile.users_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @profile.rating %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

@@ -1,0 +1,2 @@
+json.extract! comment_widget, :id, :post_id, :allow_api_access, :description, :current_score, :commenter_count, :voter_count, :status, :widget_style_id, :created_by, :updated_by, :created_at, :updated_at
+json.url comment_widget_url(comment_widget, format: :json)

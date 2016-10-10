@@ -1,0 +1,1 @@
+json.partial! "group_actions/group_action", group_action: @group_action

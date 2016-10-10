@@ -1,0 +1,2 @@
+json.extract! profile_action, :id, :profile_id, :action, :description, :visibility_id, :status, :created_by, :updated_by, :created_at, :updated_at
+json.url profile_action_url(profile_action, format: :json)

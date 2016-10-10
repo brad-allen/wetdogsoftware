@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @group_invite.group %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @group_invite.profile %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group_invite.status %>
+</p>
+
+<p>
+  <strong>Invited at:</strong>
+  <%= @group_invite.invited_at %>
+</p>
+
+<p>
+  <strong>Reinvited at:</strong>
+  <%= @group_invite.reinvited_at %>
+</p>
+
+<p>
+  <strong>Rejected at:</strong>
+  <%= @group_invite.rejected_at %>
+</p>
+
+<p>
+  <strong>Accepted at:</strong>
+  <%= @group_invite.accepted_at %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @group_invite.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @group_invite.updated_by %>
+</p>
+
+<p>
+  <strong>Is admin:</strong>
+  <%= @group_invite.is_admin %>
+</p>
+
+<p>
+  <strong>Can post:</strong>
+  <%= @group_invite.can_post %>
+</p>
+
+<p>
+  <strong>Can add events:</strong>
+  <%= @group_invite.can_add_events %>
+</p>
+
+<p>
+  <strong>Can comment:</strong>
+  <%= @group_invite.can_comment %>
+</p>
+
+<%= link_to 'Edit', edit_group_invite_path(@group_invite) %> |
+<%= link_to 'Back', group_invites_path %>

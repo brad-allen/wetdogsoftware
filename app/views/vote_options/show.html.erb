@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vote_option.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vote_option.description %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @vote_option.value %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @vote_option.image %>
+</p>
+
+<p>
+  <strong>Widget style:</strong>
+  <%= @vote_option.widget_style %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @vote_option.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @vote_option.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_vote_option_path(@vote_option) %> |
+<%= link_to 'Back', vote_options_path %>

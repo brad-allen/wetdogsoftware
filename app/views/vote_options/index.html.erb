@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vote Options</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th>Image</th>
+      <th>Widget style</th>
+      <th>Created by</th>
+      <th>Updated by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vote_options.each do |vote_option| %>
+      <tr>
+        <td><%= vote_option.name %></td>
+        <td><%= vote_option.description %></td>
+        <td><%= vote_option.value %></td>
+        <td><%= vote_option.image %></td>
+        <td><%= vote_option.widget_style %></td>
+        <td><%= vote_option.created_by %></td>
+        <td><%= vote_option.updated_by %></td>
+        <td><%= link_to 'Show', vote_option %></td>
+        <td><%= link_to 'Edit', edit_vote_option_path(vote_option) %></td>
+        <td><%= link_to 'Destroy', vote_option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vote Option', new_vote_option_path %>

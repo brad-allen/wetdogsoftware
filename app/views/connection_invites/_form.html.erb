@@ -1,0 +1,62 @@
+<%= form_for(connection_invite) do |f| %>
+  <% if connection_invite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(connection_invite.errors.count, "error") %> prohibited this connection_invite from being saved:</h2>
+
+      <ul>
+      <% connection_invite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profile_id %>
+    <%= f.text_field :profile_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :connection_profile_id %>
+    <%= f.text_field :connection_profile_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :invited_at %>
+    <%= f.datetime_select :invited_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reinvited_at %>
+    <%= f.datetime_select :reinvited_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rejected_at %>
+    <%= f.datetime_select :rejected_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :accepted_at %>
+    <%= f.datetime_select :accepted_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :approved_by %>
+    <%= f.number_field :approved_by %>
+  </div>
+
+  <div class="field">
+    <%= f.label :approved_at %>
+    <%= f.datetime_select :approved_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

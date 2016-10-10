@@ -1,0 +1,1 @@
+json.partial! "comment_widgets/comment_widget", comment_widget: @comment_widget

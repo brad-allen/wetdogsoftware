@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Calendar event:</strong>
+  <%= @notification.calendar_event %>
+</p>
+
+<p>
+  <strong>Notification text:</strong>
+  <%= @notification.notification_text %>
+</p>
+
+<p>
+  <strong>Importance:</strong>
+  <%= @notification.importance %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @notification.status %>
+</p>
+
+<p>
+  <strong>Sleep count:</strong>
+  <%= @notification.sleep_count %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @notification.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @notification.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+<%= link_to 'Back', notifications_path %>

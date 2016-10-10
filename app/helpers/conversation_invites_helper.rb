@@ -1,0 +1,2 @@
+module ConversationInvitesHelper
+end

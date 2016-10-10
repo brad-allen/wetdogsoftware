@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @page.name %>
+</p>
+
+<p>
+  <strong>Profile Id:</strong>
+  <%= @page.profile_id %>
+</p>
+
+<p>
+  <strong>Group Id:</strong>
+  <%= @page.group_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @page.description %>
+</p>
+
+<p>
+  <strong>Page order:</strong>
+  <%= @page.page_order %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @page.status %>
+</p>
+
+<p>
+  <strong>Group visibility:</strong>
+  <%= @page.group_visibility %>
+</p>
+
+<p>
+  <strong>Connection visibility:</strong>
+  <%= @page.connection_visibility %>
+</p>
+
+<p>
+  <strong>Users visibility:</strong>
+  <%= @page.users_visibility %>
+</p>
+
+<p>
+  <strong>Public visibility:</strong>
+  <%= @page.public_visibility %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @page.rating %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @page.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @page.updated_by %>
+</p>
+
+<%= link_to 'Create New Post', new_post_path(page_id:@page.id) %>
+<%= link_to 'Posts for this Page', page_posts_path(page_id:@page.id) %>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

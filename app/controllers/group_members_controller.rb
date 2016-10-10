@@ -1,0 +1,93 @@
+class GroupMembersController < ApplicationController
+  before_action only: [:edit, :update] { |c| c.authorize_update_by_profile_id params[:id] }
+  before_action only: [:show] { |c| c.authorize_show_by_profile_id params[:id] }
+
+  before_action only: [:show, :edit, :update, :destroy] { |c| c.set_group_member params[:id] }
+  
+  before_action :deny_non_admins, only: [:destroy]
+
+  # GET /group_members
+  # GET /group_members.json
+  def index
+    @group_members = GroupMember.all
+    respond_to do |format|
+      format.json { render json: wrap_response(:group_members, @group_members) }
+      format.html
+    end
+  end
+
+  # GET /group_members/1
+  # GET /group_members/1.json
+  def show
+    respond_to do |format|
+      format.json { render json: wrap_response(:group_members, @group_member) }
+      format.html
+    end
+  end
+
+  # GET /group_members/new
+  def new
+    @group_member = GroupMember.new
+    @group_member.group_id = params[:group_id]
+  end
+
+  # GET /group_members/1/edit
+  def edit
+  end
+
+  # POST /group_members
+  # POST /group_members.json
+  def create
+    @group_member = GroupMember.new(group_member_params)
+    set_created @group_member, 'active'  
+    @group_member.group = 
+    #add a group
+    #make sure this person owns the group or admins it!
+
+    respond_to do |format|
+      if @group_member.save
+        format.html { redirect_to @group_member, notice: 'Group member was successfully created.' }
+        format.json { render :show, status: :created, location: @group_member }
+      else
+        format.html { render :new }
+        format.json { render json: @group_member.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /group_members/1
+  # PATCH/PUT /group_members/1.json
+  def update
+    set_updated @group_member
+    respond_to do |format|
+      if @group_member.update(group_member_params)
+        format.html { redirect_to @group_member, notice: 'Group member was successfully updated.' }
+        format.json { render :show, status: :ok, location: @group_member }
+      else
+        format.html { render :edit }
+        format.json { render json: @group_member.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /group_members/1
+  # DELETE /group_members/1.json
+  def destroy
+    @group_member.destroy
+    respond_to do |format|
+      format.html { redirect_to group_members_url, notice: 'Group member was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  def set_group_member id
+    @group_member = GroupMember.find_by_id(id)
+    return head(:not_found) unless @group_member.present?
+  end
+
+  private
+    
+    def group_member_params
+      params.require(:group_member).permit(:group_id, :profile_id, :status, :created_by, :updated_by, :is_admin, :can_post, :can_add_events, :can_comment)
+    end
+end

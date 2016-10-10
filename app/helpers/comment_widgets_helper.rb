@@ -1,0 +1,2 @@
+module CommentWidgetsHelper
+end
